@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Catco.com</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-image: url("https://marketplace.canva.com/EAFhwfMq3ds/1/0/1600w/canva-colorful-cute-cats-illustration-desktop-wallpaper-KBBZLdpjLcM.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* NAV */
+nav {
+    background-color: #a47070;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    margin: 0;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav li a:hover {
+    background-color: #8c5d5d;
+    transform: scale(1.05);
+}
+
+/* SECTIONS */
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+}
+
+/* HEADINGS */
+h1 {
+    font-family: 'DM Serif Display', serif;
+    color: rgb(228, 148, 94);
+    font-size: 50px;
+}
+
+/* PARAGRAPH */
+p {
+    color: rgb(103, 86, 76);
+    font-size: 18px;
+    max-width: 600px;
+    margin: 10px auto 20px;
+}
+
+/* BUTTON */
+button {
+    padding: 12px 30px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: #a47070;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #8c5d5d;
+}
+
+/* PRODUCTS BACKGROUND */
+
+#products {
+    background: linear-gradient(160deg, #e2d0bb, #f9e9ce);
+}
+
+/* ACCORDION */
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.container {
+    display: flex;
+}
+
+.card {
+    width: 130px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 25px;
+    margin: 0 10px;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px #f7f8f9;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 400px;
+}
+
+.description {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+input:checked + label .description {
+    opacity: 1;
+}
+
+/* CARD BACKGROUNDS */
+#one { background-image: url("https://i.pinimg.com/736x/0f/f1/e7/0ff1e742bffa258e7b8c5216ae317aa3.jpg"); }
+#two { background-image: url("https://clayme.in/wp-content/uploads/2025/07/IMG20250821174708-scaled.jpg"); }
+#three { background-image: url("https://nestasia.in/cdn/shop/products/DSC02199.jpg?v=1644560196&width=800"); }
+#four { background-image: url("https://images-cdn.ubuy.co.in/634d09ae522a3a1c7909bd2f-nawaii-cat-stuffed-animal-plush-toy-cute.jpg"); }
+
+.card {
+    position: relative;
+}
+
+.content-box {
+    background: rgba(255, 255, 255, 0.85); /* slightly transparent */
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home">
+    <div class="content-box">
+    <h1>Hello!</h1>
+    <p>Welcome to our cute cat merch world 🐱</p>
+    <a href="#products">
+    <button>Check Out</button>
+</a>
+    </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+    <h1>Our Products</h1>
+    <p>Adorable hoodies, mugs, stickers and more!</p>
+
+    <div class="wrapper">
+        <div class="container">
+
+            <input type="radio" name="slide" id="c1" checked>
+            <label for="c1" class="card" id="one">
+                <div class="description">
+                    <h4>Tshirt</h4>
+                    
+                </div>
+            </label>
+
+            <input type="radio" name="slide" id="c2">
+            <label for="c2" class="card" id="two">
+                <div class="description">
+                    <h4>Keychain</h4>
+                
+                </div>
+            </label>
+
+            <input type="radio" name="slide" id="c3">
+            <label for="c3" class="card" id="three">
+                <div class="description">
+                    <h4>Bottle </h4>
+                    <p></p>
+                </div>
+            </label>
+
+            <input type="radio" name="slide" id="c4">
+            <label for="c4" class="card" id="four">
+                <div class="description">
+                    <h4>Plushie</h4>
+                    
+                </div>
+            </label>
+
+        </div>
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+   <div class="content-box">
+    <h1>About Us</h1>
+    <p>We are a small cat-loving brand spreading cuteness worldwide.</p>
+    <p>Contact at catcocom@gmail.com</p>
+    </div>
+</section>
+
+</body>
+</html>
